@@ -18,6 +18,7 @@ public class Main5 {
         library1.findBookByTitle("book5").borrow();
 
         //If trying to borrow book not found, have to do a try-catch with the current setup
+        //Could also do if (*.findBookByTitle != null){}, moving this to own method and passing it a string and a library.
         try {
             library1.findBookByTitle("book31").borrow();
         } catch (Exception e) {
