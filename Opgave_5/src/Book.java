@@ -5,21 +5,33 @@ public class Book {
     private boolean isAvailable;
 
     public Book(String title, String author, boolean isAvailable){
-        this.title = title;
-        this.author = author;
+        if (title != null && !title.isBlank()) {
+            this.title = title;
+        }
+        else {
+            this.title = "placeholder";
+        }
+
+        if (author != null && !author.isBlank()) {
+            this.author = author;
+        }
+        else {
+            this.author = "placeholder";
+        }
+
         this.isAvailable = isAvailable;
     }
 
     public String getTitle(){
-        return title;
+        return this.title;
     }
 
     public String getAuthor(){
-        return author;
+        return this.author;
     }
 
     public boolean isAvailable(){
-        return isAvailable;
+        return this.isAvailable;
     }
 
     public void borrow(){
