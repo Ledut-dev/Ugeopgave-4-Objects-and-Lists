@@ -30,7 +30,7 @@ public class Product {
         System.out.println();
     }
 
-
+//No need to create variable here, can return true directly in if condition, otherwise false
     public boolean hasTag(String tag){
         boolean hasTag = false;
 

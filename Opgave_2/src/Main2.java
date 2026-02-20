@@ -38,8 +38,11 @@ public class Main2 {
                 mostExpensive = p;
             }
         }
+        System.out.println();
         System.out.println(mostExpensive.name);
 
+
+        System.out.println();
         printPriceRange(products, 5, 150);
 
     }
@@ -48,11 +51,10 @@ public class Main2 {
     //Print products within certain price range
     public static void printPriceRange(Product[] array, double min, double max){
 
-        System.out.println("Products within the price of " + min + "-" + max);
+        System.out.println("Products within the price of " + min + " - " + max + ":");
         for (Product p : array){
             if (p.price >= min && p.price <= max){
                 p.printInfo();
-                System.out.println();
             }
         }
 

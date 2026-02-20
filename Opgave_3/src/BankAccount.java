@@ -4,11 +4,12 @@ public class BankAccount {
 
     String owner;
     double balance;
-    ArrayList<Transaction> transactions = new ArrayList<>();
+    ArrayList<Transaction> transactions;
 
     public BankAccount(String owner, double startingBalance){
         this.owner = owner;
         this.balance = startingBalance;
+        transactions = new ArrayList<>();
     }
 
     //Returns current balance
@@ -18,8 +19,12 @@ public class BankAccount {
 
     //Prints all transactions
     public void printTransactionHistory(){
+        int transactionNumber = 1;
         for (Transaction t : transactions){
-            System.out.println(t.toString());
+            //"just" 't' here prints the full desired result, since we specify toString() in this class itself.
+            //Calls toString automatically
+            System.out.println("Transaction " + transactionNumber + ": " + t);
+            transactionNumber++;
             System.out.println();
         }
     }
